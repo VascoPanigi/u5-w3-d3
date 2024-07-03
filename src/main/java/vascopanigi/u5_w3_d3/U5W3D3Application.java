@@ -47,7 +47,6 @@ public class U5W3D3Application {
 		}
 			book.addBookComponentToList(newSection);
 		}
-
 		book.print();
 		System.out.println("Number of pages: " + book.getNumberOfPages());
 	}

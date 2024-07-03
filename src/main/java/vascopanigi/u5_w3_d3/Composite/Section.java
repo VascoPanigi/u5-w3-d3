@@ -18,12 +18,19 @@ public class Section implements BookComponent{
     @Override
     public void print() {
         System.out.println("Sezione: " + title);
+            int total = 0;
         for (BookComponent component : bookComponents) {
-            // implementazione un po' bolsa...
-            component.print();
+            // TODO.1 fixare implementazione un po' bolsa -------- DONE!
+//            component.print();
+            if(component instanceof Page){
+                total += 1;
+            }else{
+                component.print();
+            }
         }
+            System.out.println("Total pages in this section: " + total);
     }
-    
+
     @Override
     public int getNumOfPages() {
         int total = 0;
