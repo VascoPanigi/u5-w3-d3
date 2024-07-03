@@ -20,15 +20,15 @@ public class Section implements BookComponent{
         System.out.println("Sezione: " + title);
             int total = 0;
         for (BookComponent component : bookComponents) {
-            // TODO.1 fixare implementazione un po' bolsa -------- DONE!
-//            component.print();
-            if(component instanceof Page){
-                total += 1;
-            }else{
-                component.print();
-            }
+
+            component.print();
+//            if(component instanceof Page){
+//                total += 1;
+//            }else{
+//                component.print();
+//            }
         }
-            System.out.println("Total pages in this section: " + total);
+//            System.out.println("Total pages in this section: " + total);
     }
 
     @Override

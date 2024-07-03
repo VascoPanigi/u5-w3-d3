@@ -4,7 +4,7 @@ public class Page implements BookComponent{
     private int pageNum;
 
     public Page(int pageNum) {
-        this.pageNum = 1;
+        this.pageNum = pageNum;
     }
 
     @Override

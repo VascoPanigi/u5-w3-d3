@@ -40,11 +40,13 @@ public class U5W3D3Application {
 		Faker faker = new Faker();
 
 		for (int i = 0; i < 5; i++) {
-			Section newSection = new Section(faker.gameOfThrones().character());
+			Section newSection = new Section("SECTION " +faker.gameOfThrones().character());
+			Section newSection2 = new Section("SUBSECTION " +faker.gameOfThrones().character());
 			for (int j = 0; j < 50; j++) {
-				Page newPage = new Page(1);
-				newSection.addComponentToList(newPage);
-		}
+				Page newPage = new Page(j+1);
+				newSection2.addComponentToList(newPage);
+			}
+			newSection.addComponentToList(newSection2);
 			book.addBookComponentToList(newSection);
 		}
 		book.print();
